@@ -1,5 +1,5 @@
 section .data
-Num_array db 16h,17h,18h,19h,20h
+Num_array db 12h,62h,25h,25h,52h
 msg db"result of array addition is",10
 msglen equ $-msg
 section .bss
