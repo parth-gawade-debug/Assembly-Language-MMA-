@@ -7,6 +7,14 @@ section .data
 section .bss
     result resb 20
 bits 64
+%macro abc 4
+mov rax,%1
+mov rdi,%2
+mov rsi,%3
+mov rdx,%4
+%endmacro
+
+
 section .text
     global _start
 
@@ -36,14 +44,7 @@ only_inc:
 
 
     ; Display message
-
-    mov rax, 1
-    mov rdi, 1
-    mov rsi, msg
-    mov rdx, msglen
-    syscall
-
-
+abc 1,1,msg,msglen
     ; Display sorted array
 
     mov rdi, arr
@@ -91,18 +92,7 @@ second_digit:
     dec dl
     jnz disp_loop
 
-
     ; Display result
-
-    mov rax, 1
-    mov rdi, 1
-    mov rsi, result
-    mov rdx, 20
-    syscall
-
-
+    abc 1,1,result,20
     ; Exit
-
-    mov rax, 60
-    mov rdi, 0
-    syscall
+  abc 60,0,0,0
