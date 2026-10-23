@@ -1,5 +1,5 @@
 # Assembly-Language-MMA-
-This repository contains all the assembly language code (Microprocessor ,Microcontroller and its Applications)
+This repository contains all the assembly language code (Microprocessor ,Microcontroller and its Applications) and additional projects.
 
 
 ## Petrol Price Display Using 8051 Microcontroller
